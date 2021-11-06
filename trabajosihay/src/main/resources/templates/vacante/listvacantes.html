@@ -9,6 +9,7 @@
 <body>
 	<div th:insert="fragments/header::navbar"></div><!-- Thymeleaf Fragments example -->
 	<div class="container">
+		<button class="btn btn-link"><a th:href="@{/vacante/new}">Nueva</a></button>
 		Supuestamente Guardada!<br>
 		Titulo:<p th:text="${vacante.titulo}"></p>
 		Descripción:<p th:text="${vacante.descripcion}"></p>

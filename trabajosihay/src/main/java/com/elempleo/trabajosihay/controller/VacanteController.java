@@ -16,7 +16,7 @@ import com.elempleo.trabajosihay.repository.VacanteRepository;
 @RequestMapping("/vacante")
 public class VacanteController {
 
-	//@Autowired
+	@Autowired
 	private VacanteRepository vacanteRepository;
 	
 	@GetMapping("/new")
@@ -35,6 +35,7 @@ public class VacanteController {
 			}
 			return "vacante/formcreatenew";
 		}
+		vacanteRepository.save(vacante);
 		
 		
 		model.addAttribute("vacante", vacante);
